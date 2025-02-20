@@ -1,0 +1,348 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.625rem 1rem;
+    text-decoration: none;
+    color: white;
+    background: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background: #6200ea;
+  }
+  
+  /* 기존 스타일 유지하면서 home-container 수정 */
+  .home-container {
+    padding-top: 80px; /* 기존 5rem에서 80px로 수정 */
+    min-height: calc(100vh - 80px); /* navbar 높이를 고려한 높이 설정 */
+    display: flex;
+    align-items: flex-start; /* center에서 flex-start로 변경 */
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .home-content {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  /* Hello 텍스트 섹션 여백 조정 */
+  .text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 1.5rem에서 1rem으로 줄임 */
+    padding-top: 1rem; /* 추가된 상단 여백 */
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.2; /* 추가된 줄 높이 설정 */
+  }
+  
+  /* navbar 높이 명시적 설정 */
+  .navbar {
+    height: 60px; /* navbar 높이 명시적 설정 */
+    padding: 0 2rem;
+  }
+  
+  .intro-text {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .highlight {
+    color: #6200ea;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin: 0;
+  }
+  
+  .tech-stack {
+    margin-top: 2rem;
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tech-item {
+    background: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background: #6200ea;
+    color: white;
+  }
+  
+  .secondary-btn {
+    background: #333;
+    color: white;
+  }
+  
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(98, 0, 234, 0.2);
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Projects page styles */
+  .project-container {
+    background: #222;
+    border-radius: 16px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .project-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .project-info h3 {
+    margin: 0;
+    color: #ccc;
+    font-size: 1.25rem;
+  }
+  
+  .project-period {
+    color: #999;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .home-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-section {
+      align-items: center;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  
+    .project-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  }
+
+  /* Experience 페이지 스타일 */
+  .awards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  
+  .award-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: #222;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .award-item:hover {
+    transform: translateY(-4px);
+  }
+  
+  .award-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .award-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .award-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .award-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .award-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .award-date {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  .award-organizer {
+    font-size: 1.1rem;
+    color: #6200ea;
+    font-weight: 500;
+  }
+  
+  .award-description {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .news-link:hover {
+    color: #0056b3;
+  }
+  
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .award-item {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .award-image {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .award-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
