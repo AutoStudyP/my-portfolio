@@ -236,9 +236,6 @@ body {
       grid-template-columns: 1fr;
     }
   
-    .nav-links {
-      display: none;
-    }
   }
 
   /* Experience 페이지 스타일 */
@@ -346,3 +343,81 @@ body {
       gap: 0.5rem;
     }
   }
+
+  .section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
+/* 날짜 + 버튼을 같은 줄에 배치 */
+.date-button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* 날짜 스타일 */
+.project-date {
+  font-size: 0.9rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+/* PDF 버튼 스타일 (IEEE 스타일) */
+.pdf-button {
+  padding: 6px 12px;
+  background-color: #00629b; /* IEEE 블루 */
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 1px solid #004f7c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pdf-button:hover {
+  background-color: #004f7c;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  gap: 20px;
+}
+
+/* 기본적으로 텍스트는 왼쪽 정렬 */
+.text-content {
+  flex: 1;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* 이미지 가운데 정렬 */
+.image-content {
+  flex: 1;
+  text-align: center;
+}
+
+/* 화면이 768px 이하일 경우 텍스트가 아래로, 이미지가 위로 이동 */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column-reverse;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .image-content {
+    order: -1;
+  }
+}
